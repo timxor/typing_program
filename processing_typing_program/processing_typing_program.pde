@@ -1,7 +1,7 @@
 import processing.sound.*;
 import ddf.minim.*;
 
-SoundFile hitCorrect, hitwrong, hitreturn, hitend, deafaultSong, curious, airbattle, plane2;
+SoundFile hitCorrect, hitwrongSound, hitreturn, hitend, deafaultSong, curious, airbattle, plane2;
 //AudioSnippet hitCorrect, hitwrong, hitreturn, hitend, deafaultSong, curious, airbattle, plane2;
 
 Minim minim;
@@ -80,7 +80,7 @@ boolean planeMusic = true;
 
 void setup()
 {
-  size(1600, 900);
+  size(1440, 785);
   //int width = 1600;  // some function to calculate width
   //int height = 900;  // some function to calculate height
   loadSound();
@@ -350,11 +350,11 @@ void keyPressed()
       wordsCompleted = 0;
     }
     keysHitCorrect++;
-    hitCorrect.play();
+    //hitCorrect.play();
     //hitCorrect.rewind();
     if ( keyCode == 10 )
     {
-      hitend.play();
+      //hitend.play();
       //hitend.rewind();
     }
 
@@ -381,7 +381,7 @@ void hitwrongkey()
   if ( keyCode != SHIFT )
   {
     println("keyCode = " + keyCode);
-    hitwrong.play();
+    // hitwrongSound.play();
     //hitwrong.rewind();
     hitWrong++;
   }
@@ -520,7 +520,7 @@ void loadSound()
   AudioSnippet hitCorrect = minim.loadSnippet("keypressed1.wav");
   //hitCorrect = minim.loadSnippet("keypressed1.wav");
   
-  AudioSnippet hitwrong = minim.loadSnippet("wrong.wav");
+  AudioSnippet hitwrongSound = minim.loadSnippet("wrong.wav");
   //hitwrong = minim.loadSnippet("wrong.wav");
   
   AudioSnippet hitend = minim.loadSnippet("complete.wav");
