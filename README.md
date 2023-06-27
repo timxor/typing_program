@@ -14,7 +14,7 @@ Sound effects need to be fixed for wrong key sound and correct key sound.
 
 ```
 
-cd typing_program/processing_typing_program
+cd processing_typing_program
 
 processing-java --sketch=/Users/tim/code/typing_program/processing_typing_program --run
 
